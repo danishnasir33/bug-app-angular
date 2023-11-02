@@ -1,0 +1,33 @@
+h1 {
+	font-size: 28px !important;
+	font-weight: 500 !important;
+	padding: 0;
+}
+
+.avatar-1 {
+	z-index: 1;
+  position: relative;
+  bottom: 3px;
+  left: 3px;
+}
+
+.avatar-2 { 
+	position: relative;
+  right: 12px;
+  bottom: 7px;
+}
+
+.add-btn {
+	color: white;
+	border-radius: 5px;
+	background: #007DFA;
+	width: 200px;
+	height: 56px;
+	margin-left: 15px;
+}
+
+.cancel-btn {
+  border-radius: 5px;
+  width: 200px;
+  height: 56px;
+}

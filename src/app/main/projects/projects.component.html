@@ -1,0 +1,49 @@
+<div style="margin: 5% 16%;">
+  <app-dashboard />
+  <p>
+    <mat-toolbar>
+      <mat-toolbar-row style="border-left: 5px solid green; display: flex; align-items: center; justify-content: space-between;">
+        <div>
+          <h4 style="font-size: 16px;">Projects</h4>
+          <span style="color: #AEAEAE;;">Hi {{currentUser?.name}}, welcome to ManageBug</span>
+        </div>
+  
+        <mat-form-field appearance="outline" style="background: #F1F1F1;">
+          <mat-icon matPrefix>search</mat-icon>
+          <input matInput type="search" placeholder="Search for projects">
+        </mat-form-field>
+  
+        <button mat-raised-button color="#0085fa" class="form-btn" (click)="openNewProjectModal()">
+          <span>+ Add New Project</span>
+        </button>
+  
+        <div style="display: flex; align-items: center;">
+          <span>Sort by </span>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+  
+        <div style="display: flex; align-items: center;">
+          <span>My Project </span>
+          <mat-icon>expand_more</mat-icon>
+        </div>
+  
+        <img src="assets/images/Group.png" alt="Logo" class="logo">
+      
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+  
+  
+  <div class="card-container">
+    <div class="row" *ngFor="let project of projects; let i = index;">
+      <mat-card class="card" *ngIf="i % 3 === 0 || i % 3 === 1 || i % 3 === 2">
+        <mat-card-content>
+          <img [src]="data[i].image" alt="project-list" class="project-list" [ngStyle]="{ 'background-color': projectColors[i % projectColors.length] }">
+          <p class="title" style="cursor: pointer;" (click)="openBugsComponent(project.project_id)">{{ project.project_name }}</p>
+          <p class="description">{{ project.project_description }}</p>
+          <p class="description">Task Done: <span style="color:#000; font-size: 12px;">{{ data[i].tasksDone }}</span></p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

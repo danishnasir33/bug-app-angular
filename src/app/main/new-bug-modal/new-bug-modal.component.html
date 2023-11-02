@@ -1,0 +1,82 @@
+<div style="padding: 10px; margin: 20px; display: flex; flex-direction: column; gap: 30px;">
+
+  <div>
+    <img src="assets/images/close.png" alt="Close" class="close" mat-dialog-close style="position: absolute; right: 20px; cursor: pointer;">
+  </div>
+
+  <div>
+    <h1 class="title" mat-dialog-title>Add New Bug</h1>
+  </div>
+
+  <form class="new-bug-form" [formGroup]="newBugForm" (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column; gap: 25px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 60%;">
+
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <mat-label>Assign to</mat-label>
+        <div mat-card-avatar style="cursor: pointer" [matMenuTriggerFor]="menu">
+          <img src="assets/images/avatar1.png" alt="Avatar1" class="avatar-1">
+          <img src="assets/images/avatar2.png" alt="Avatar2" class="avatar-2">
+        </div>
+        <mat-menu #menu="matMenu">
+          <ng-container *ngFor="let developer of developers">
+            <button mat-menu-item (click)="selectDeveloper(developer)">{{ developer.name }}</button>
+          </ng-container>
+        </mat-menu>
+      </div>
+
+      <mat-form-field class="example-form-field">
+        <mat-label>Choose due date</mat-label>
+        <input matInput [matDatepicker]="deadlinePicker" formControlName="deadline" [min]="minDate">
+        <mat-datepicker-toggle matSuffix [for]="deadlinePicker"></mat-datepicker-toggle>
+        <mat-datepicker #deadlinePicker></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Bug Type</mat-label>
+      <mat-select formControlName="bug_type">
+        <mat-option value="bug">Bug</mat-option>
+        <mat-option value="feature">Feature</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let option of statusOptions" [value]="option">{{ option }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Add title here</mat-label>
+      <input matInput type="text" formControlName="title" required>
+      <mat-error *ngIf="newBugForm.get('title')?.hasError('required')">
+        Title is required
+      </mat-error>
+      <mat-error *ngIf="newBugForm.get('title')?.hasError('title')">
+        Please enter a valid Title
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Add bug details</mat-label>
+      <input matInput type="text" formControlName="description" required>
+      <mat-error *ngIf="newBugForm.get('description')?.hasError('required')">
+        Description is required
+      </mat-error>
+      <mat-error *ngIf="newBugForm.get('description')?.hasError('description')">
+        Please enter valid description
+      </mat-error>
+    </mat-form-field>
+
+    <input type="file" (change)="handleImage($event)" accept="image/*">
+  </form>
+</div>
+
+<mat-dialog-actions style="position: relative; justify-content: end; right: 20px; bottom: 10px;">
+  <button mat-raised-button color="#0085fa" class="add-btn" (click)="onSubmit()">
+    <span>Add</span>
+  </button>
+  <button mat-raised-button mat-dialog-close class="cancel-btn">Cancel</button>
+</mat-dialog-actions>

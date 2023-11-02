@@ -1,0 +1,53 @@
+<div class="dashboard">
+  <p>
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <div style="display: flex; align-items: center; width: 30%;">
+          <img src="assets/images/app-logo.png" alt="Logo" class="app-logo">
+          <p class="company-name">
+            <span class="company-manage">Manage</span><span class="company-bug">Bug</span>
+          </p>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: space-around; width: 40%;">
+          <div style="display: flex; align-items: center;">
+            <img src="assets/images/projects.png" alt="Projects" class="projects">
+            <span style="margin: 5px;">Projects</span>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <img src="assets/images/tasks.png" alt="Tasks" class="tasks">
+            <span style="margin: 5px;">Tasks</span>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <img src="assets/images/tickets.png" alt="Tickets" class="tickets">
+            <span style="margin: 5px;">Tickets</span>
+          </div>
+          <div style="display: flex; align-items: center;">
+            <img src="assets/images/users.png" alt="users" class="users">
+            <span style="margin: 5px;">Users</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: end; width: 15%;">
+          <img src="assets/images/Notification.png" alt="Notification" class="notification" style="width: 20%; height: 20%;">
+          <img src="assets/images/Message.png" alt="Message" class="message" style="width: 20%; height: 20%;">
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-around; width: 15%; margin: 20px;">
+          <img src="assets/images/visnext-logo.png" alt="Visnext Logo" class="visnext-logo">
+          <span>{{ currentUser?.name }} </span>
+          <mat-icon style="cursor: pointer" [matMenuTriggerFor]="logOutMenu">expand_more</mat-icon>
+
+          <mat-menu #logOutMenu="matMenu">
+            <button mat-menu-item (click)="logout()">Logout</button>
+          </mat-menu>
+
+        </div>
+      
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+
+  <br>
+
+</div>

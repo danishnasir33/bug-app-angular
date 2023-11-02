@@ -1,0 +1,63 @@
+<div fyLayout="row" style="height: 100vh">
+  <div fxFlex="35">
+    <div class="left-area" style="background-image: url('assets/images/home1.png'); background-size: cover; background-position: center;">
+      <div class="logo-container">
+        <img src="assets/images/Group.png" alt="Logo" class="logo">
+        <p class="company-name">
+          <span class="company-manage">Manage</span><span class="company-bug">Bug</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="65" style="background-color: #FFFFFF;">
+    <p class="top-right-text">
+      <span class="simple-text">Already have an account?</span>
+      <a routerLink="/login">Sign In</a>
+    </p>
+    <div class="middle-area">
+      <p class="join-us">Join Us!</p>
+      <p class="join-us-text">To begin this journey, tell us what type of account you’d be opening.</p>
+
+      <mat-card class="custom-card" (click)="goToSignup('manager')" (mouseover)="showManagerIcon = true" (mouseout)="showManagerIcon = false">
+        <mat-card-content>
+          <div class="home-card">
+            <img src="assets/images/manager.png" alt="Manager" class="logo" style="background: #007DFA;">
+            <div>
+              <h4>Manager</h4>
+              <p>Signup as a manager to manage the tasks and bugs</p>
+            </div>
+            <mat-icon *ngIf="showManagerIcon">arrow_forward</mat-icon>
+          </div>         
+        </mat-card-content>
+      </mat-card>
+      <br>
+      <mat-card class="custom-card" (click)="goToSignup('developer')" (mouseover)="showDeveloperIcon = true" (mouseout)="showDeveloperIcon = false">
+        <mat-card-content>
+          <div class="home-card">
+            <img src="assets/images/developer.png" alt="Developer" class="logo">
+            <div>
+              <h4>Developer</h4>
+              <p>Signup as a manager to manage the tasks and bugs</p>
+            </div>
+            <mat-icon *ngIf="showDeveloperIcon">arrow_forward</mat-icon>
+          </div>         
+        </mat-card-content>
+      </mat-card>
+      <br>
+      <mat-card class="custom-card" (click)="goToSignup('qa')" (mouseover)="showQaIcon = true" (mouseout)="showQaIcon = false">
+        <mat-card-content>
+          <div class="home-card">
+            <img src="assets/images/qa.png" alt="QA" class="logo">
+            <div>
+              <h4>QA</h4>
+              <p>Signup as a manager to manage the tasks and bugs</p>
+            </div>
+            <mat-icon *ngIf="showQaIcon">arrow_forward</mat-icon>
+          </div>         
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

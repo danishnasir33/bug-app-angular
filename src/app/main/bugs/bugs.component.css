@@ -1,0 +1,88 @@
+h1 {
+  color: #252C32;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.792px;
+}
+
+.form-btn {
+  border-radius: 10px;
+  background: #0085fa !important;
+  color: white !important;
+  padding: 22px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.icon-style {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+  border: 1px solid #D0D5DD;
+  background: #FFF;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.checkbox-style {
+  opacity: 1;
+}
+
+.new-status {
+  color: #EC5962;
+  background-color: #FDF2F2;
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+
+.started-status {
+  color: #3069FE;
+  background-color: #EEF3FF;
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+
+.completed-status {
+  color: #00B894;
+  background-color: #e1f4f0;
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+
+.resolved-status {
+  color: rgb(147, 7, 138);
+  background-color: #EEF3FF;
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+
+.started-btn {
+  color: #3069FE;
+  background-color: #EEF3FF;
+  padding: 2px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.completed-btn {
+  color: #00B894;
+  background-color: #e1f4f0;
+  padding: 2px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.resolved-btn {
+  color: rgb(147, 7, 138);
+  background-color: #EEF3FF;
+  padding: 2px 15px;
+  border-radius: 10px;
+  font-size: 12px;
+}

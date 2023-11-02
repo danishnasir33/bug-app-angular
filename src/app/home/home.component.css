@@ -1,0 +1,133 @@
+.left-area {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.company-name {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.company-manage {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+}
+
+.company-bug {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24.49px;
+  font-weight: 100;
+  line-height: 32.33px;
+  letter-spacing: 0.01em;
+}
+
+.top-right-text {
+  font-family: Poppins;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  margin-right: 45px;
+  align-items: center;
+}
+
+.simple-text {
+  color: #8692A6;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.sign-in {
+  color: #007DFA;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.middle-area {
+  margin-top: 18%;
+  margin-left: 25%;
+  gap: 10px;
+  flex-direction: column;
+  display: flex;
+  width: 40%;
+}
+
+.join-us {
+  color: #2F3367;
+  /* font-family: Poppins; */
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.join-us-text {
+  color: #8692A6;
+  /* font-family: Poppins; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+a {
+  color: #007DFA;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.home-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-card img {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #007DFA;
+  background: #F5F5F7;
+  box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
+}
+
+.home-card h4 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.home-card p {
+  color: #8692A6;
+  font-size: 14px;
+}
+
+.custom-card:hover {
+  border-radius: 6px;
+  border: 1px solid #007DFA;
+  background: #F5F5F7;
+  box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}

@@ -1,0 +1,49 @@
+.form-btn {
+  border-radius: 10px;
+  background: #0085fa !important;
+  color: white !important;
+  /* width: 50%; */
+  padding: 22px;
+}
+
+.logo {
+  background: #007DFA;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-top: 30px;
+  border: 1px solid #e0e0e0;
+  width: 380px;
+  padding: 10px;
+}
+
+.project-list {
+  padding: 7px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.148px;
+}
+
+.description {
+  color: #87888C;
+  font-size: 12.675px;
+  font-weight: 400;
+  letter-spacing: 0.127px;
+}

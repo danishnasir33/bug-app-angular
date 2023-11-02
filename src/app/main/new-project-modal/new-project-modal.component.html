@@ -1,0 +1,42 @@
+<div style="padding: 20px;">
+  <h2 mat-dialog-title>Add New Project</h2>
+  <mat-dialog-content>
+    <form class="new-project-form" [formGroup]="newProjectForm" (ngSubmit)="onSubmit()">
+      
+      <div style="display: flex; flex-direction: column; width: 50%; gap: 12px;">
+
+        <label class="f-label" for="project_name">Project Name</label>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Enter project name" formControlName="project_name" required>
+          <mat-error *ngIf="newProjectForm.get('project_name')?.hasError('required')">
+            Project name is required
+          </mat-error>
+          <mat-error *ngIf="newProjectForm.get('project_name')?.hasError('project_name')">
+            Please enter a valid Project name
+          </mat-error>
+        </mat-form-field>
+
+        <label class="f-label" for="project_description">Short Details</label>
+        <mat-form-field>
+          <input matInput type="text" placeholder="Enter details here" formControlName="project_description" required>
+          <mat-error *ngIf="newProjectForm.get('project_description')?.hasError('required')">
+            Project description is required
+          </mat-error>
+          <mat-error *ngIf="newProjectForm.get('project_description')?.hasError('project_description')">
+            Please enter a valid Project description
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions style="justify-content: flex-start; position: absolute; bottom: 10px;">
+    <button mat-raised-button color="#0085fa" class="add-btn" (click)="onSubmit()">
+      <span>Add</span>
+    </button>
+    <button mat-raised-button mat-dialog-close class="cancel-btn">Cancel</button>
+  </mat-dialog-actions>
+
+</div>
