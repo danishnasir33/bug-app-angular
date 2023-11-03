@@ -26,7 +26,7 @@
           <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
             Email is required
           </mat-error>
-          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('pattern')">
             Please enter a valid email address
           </mat-error>
         </mat-form-field>
@@ -37,6 +37,9 @@
           <input matInput type="password" placeholder="Enter your password" formControlName="password" required>
           <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
             Password is required
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+            Password should be at least 6 digit
           </mat-error>
         </mat-form-field>        
       
